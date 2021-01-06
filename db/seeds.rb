@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+[
+  ['Metallica', 'trash metal'],
+  ['Anthrax', 'thrash metal'],
+  ['Megadeth', 'thrash metal'],
+  ['Slayer', 'thrash metal'],
+  ['Gojira', 'technical death metal'],
+  ['Meshuggah', 'technical death metal'],
+  ['Children of bodom', 'black metal'],
+  ['Seth', 'black metal']
+].each do |band_name, genre|
+  Group.create(band_name: band_name, genre: genre)
+end
