@@ -18,3 +18,5 @@
 ].each do |band_name, genre|
   Group.create(band_name: band_name, genre: genre)
 end
+
+10.times { |i| Import.create(name: "Import ##{i}") }
