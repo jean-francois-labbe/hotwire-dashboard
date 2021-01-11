@@ -1,7 +1,18 @@
-<h1>Dashboard</h1>
+<h1 class="text-2xl font-bold">Dashboard</h1>
 
-<%= turbo_stream_from :import_count %>
-<%= turbo_frame_tag "import_count", src: dashboards_imports_path %>
+<div class="">
+  <div class="flex justify-center mb-8">
+    <div class="w-64 flex flex-col text-center">
+      <%= turbo_stream_from :import_count %>
+      <%= turbo_frame_tag "import_count", src: dashboards_imports_path %>
+    </div>
 
-<%= turbo_frame_tag "group_count", src: dashboards_groups_path %>
-<%= turbo_frame_tag "groups", src: groups_path %>
+    <div class="flex flex-col text-center w-64">
+      <%= turbo_frame_tag "group_count", src: dashboards_groups_path %>
+    </div>
+  </div>
+
+  <div class="mx-auto w-1/2">
+    <%= turbo_frame_tag "groups", src: groups_path %>
+  </div>
+</div>

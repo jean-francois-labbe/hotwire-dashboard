@@ -6,11 +6,21 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <%= javascript_pack_tag 'application', 'data-turbo-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <nav class="px-16 py-4">
+      <%= link_to "Dashboard", dashboard_index_path, class: "mr-2 underline text-blue-500" %>
+      <%= link_to "Imports", imports_path, class: "mr-2 underline text-blue-500" %>
+      <%= link_to "Import count", dashboards_imports_path, class: "mr-2 underline text-blue-500" %>
+      <%= link_to "Groups", groups_path, class: "mr-2 underline text-blue-500" %>
+      <%= link_to "Groups count", dashboards_groups_path, class: "underline text-blue-500" %>
+    </nav>
+    <div class="mx-auto max-w-5xl">
+      <%= yield %>
+    </div>
   </body>
 </html>
