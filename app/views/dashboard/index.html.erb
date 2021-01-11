@@ -1,0 +1,7 @@
+<h1>Dashboard</h1>
+
+<%= turbo_stream_from :import_count %>
+<%= turbo_frame_tag "import_count", src: dashboards_imports_path %>
+
+<%= turbo_frame_tag "group_count", src: dashboards_groups_path %>
+<%= turbo_frame_tag "groups", src: groups_path %>
