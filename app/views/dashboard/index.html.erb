@@ -1,6 +1,6 @@
-<h1 class="text-2xl font-bold">Dashboard</h1>
+<div class=" w-2/3 mx-auto">
+  <h1 class="mb-4 text-2xl font-bold">Dashboard</h1>
 
-<div class="">
   <div class="flex justify-center mb-8">
     <div class="w-64 flex flex-col text-center">
       <%= turbo_stream_from :import_count %>
@@ -12,7 +12,5 @@
     </div>
   </div>
 
-  <div class="mx-auto w-1/2">
-    <%= turbo_frame_tag "groups", src: groups_path %>
-  </div>
+  <%= turbo_frame_tag "groups", src: groups_path %>
 </div>
