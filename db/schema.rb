@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_08_083259) do
+ActiveRecord::Schema.define(version: 2021_01_22_080821) do
 
-  create_table "groups", force: :cascade do |t|
-    t.string "band_name"
-    t.string "genre"
+  create_table "imports", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "imports", force: :cascade do |t|
-    t.string "name"
+  create_table "orders", force: :cascade do |t|
+    t.string "product_name"
+    t.decimal "price", precision: 10, scale: 2
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
