@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<%= turbo_frame_tag "orders_table" do %>
+  <h2 class="text-xl">Orders</h2>
+  <%= turbo_frame_tag "orders_table_lines" do %>
+    <% @orders.each do |order| %>
+      <%= render 'order_line', order: order %>
+    <% end %>
+  <% end %>
+<% end %>
+<br>
+<%= link_to 'New Order', new_order_path %>

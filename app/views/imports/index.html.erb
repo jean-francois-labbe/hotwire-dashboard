@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
-
+<h1 class="text-2xl font-bold">Imports</h1>
+<%= link_to 'New Import', new_import_path %>
 <%= turbo_frame_tag "imports" do %>
-  <h1 class="text-2xl font-bold">Imports</h1>
-
   <table>
     <thead>
       <tr>
@@ -23,7 +21,3 @@
     </tbody>
   </table>
 <% end %>
-
-<br>
-
-<%= link_to 'New Import', new_import_path %>

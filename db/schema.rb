@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(version: 2021_01_22_080821) do
 
   create_table "orders", force: :cascade do |t|
     t.string "product_name"
-    t.decimal "price", precision: 10, scale: 2
+    t.decimal "price", precision: 10, scale: 2, default: "0.0"
+    t.boolean "shipped", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

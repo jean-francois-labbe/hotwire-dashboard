@@ -1,0 +1,12 @@
+<div id="<%= dom_id(order) %>" class="border py-1 my-1 flex justify-between">
+  <div class="">
+    <div><%= "order##{order.id}, #{order.product_name}" %></div>
+    <div><%= number_to_currency(order.price) %></div>
+  </div>
+  <div>
+    <%= button_to 'Mark as shipped', order_shipped_index_path(order) %>
+    <%= link_to 'Show', order %>
+    <%= link_to 'Edit', edit_order_path(order) %>
+    <%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+</div>

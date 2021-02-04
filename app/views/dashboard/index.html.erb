@@ -8,7 +8,11 @@
     </div>
 
     <div class="flex flex-col text-center w-64">
-      <%= turbo_frame_tag "group_count", src: "" %>
+      <%= turbo_stream_from :order_count %>
+      <%= turbo_frame_tag "order_count", src: dashboards_orders_path %>
     </div>
   </div>
+
+  <%= turbo_stream_from :orders %>
+  <%= turbo_frame_tag "orders_table", src: orders_path %>
 </div>
